@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+
+    <style>
+        article {
+            border: 2px solid mediumseagreen;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section>
+            <article>
+                <h3>article-1</h3>
+                <p class="author" id="bestseller">author-1</p>
+                <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, consequatur nostrum rem minus sapiente ullam ex ipsum cumque ad quisquam tenetur eum aliquid illum eveniet soluta quasi corporis incidunt numquam, harum dicta vitae blanditiis
+                    corrupti?
+                </p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Expedita dolorum, ut possimus delectus et enim earum facilis numquam obcaecati assumenda porro nulla excepturi nihil, aliquid totam maxime reiciendis! Optio quisquam vitae obcaecati aperiam quam! Non, dolorum nihil? Est laborum accusamus
+                    dolore voluptatem nobis.</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Quibusdam incidunt minus veniam cum explicabo veritatis labore in facilis. Atque consectetur nisi eveniet excepturi in perferendis dicta. Ratione deserunt quis assumenda eum, natus laudantium recusandae sit sint molestias nobis, quos magnam
+                    consequuntur, voluptate amet?</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        var authors = document.querySelectorAll('.special h3');
+        for (var i = 0; i < authors.length; i++) {
+            var element = authors[i];
+            console.log(element.innerText);
+            element.innerHTML = 'Lekhok-' + (i + 1);
+
+            element.style.border = "1px solid tomato";
+            element.style.backgroundColor = "cyan"
+        }
+        document.getElementById('bestseller').setAttribute('title', 'All are same');
+    </script>
+</body>
+
+</html>
